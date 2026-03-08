@@ -5,7 +5,7 @@ class QueensSolver:
         """
         def backtrack(row, cols, diag1, diag2):
             if row == n:
-                return 1
+                return 1  # 修复：row==n时应当返回1而不是0
             count = 0
             for col in range(n):
                 if col in cols or (row - col) in diag1 or (row + col) in diag2:
